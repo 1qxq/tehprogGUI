@@ -50,7 +50,8 @@ namespace GUI21
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            textBox1.Clear();
+            label3.Text = "";
         }
     }
 
