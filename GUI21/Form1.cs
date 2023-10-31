@@ -54,7 +54,43 @@ namespace GUI21
             label3.Text = "";
         }
     }
+    public class Logic
+    {
+        public static string LongStr(string str)
+        {
+            str += " ";
+            int two = 0;
+            string Out2 = "";
+            for (int i = 0; i < str.Length - 1; i++)
+            {
+                if (str[i] == str[i + 1] && str[i] != ' ')
+                {
+                    two++;
+                    int j = i;
+                    Out2 += str[i];
+                    while (str[j] == str[j + 1])
+                    {
+                        j++;
+                        Out2 += str[i];
+                        if (str[j] != str[j + 1])
+                        {
+                            Out2 += ("=" + (j + 1 - i) + "\n");
+                            i = j;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (two == 0)
+            {
+                Out2 = "Соседних одинаковых букв не найдено";
+            }
 
+
+
+            return Out2;
+        }
+    }
 
 }
     
