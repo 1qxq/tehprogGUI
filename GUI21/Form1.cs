@@ -33,8 +33,19 @@ namespace GUI21
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string str;
 
-           
+
+            str = this.textBox1.Text;
+
+            string Out = Logic.LongStr(str);
+            Properties.Settings.Default.str = str;
+            Properties.Settings.Default.Save();
+
+
+
+            label3.Text = Out;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
